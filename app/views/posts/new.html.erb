@@ -1,0 +1,14 @@
+<%= form_with model: @post do |form| %>
+<section class='flex flex-col'>
+  <%= form.label :title, 'Title:' %>
+  <%= form.text_field :title %>
+  <%= form.label :body, 'Body' %>
+  <%= form.text_area :body %>
+  <%= form.label :user_id, 'User:' %>
+  <%= form.number_field :user_id %>
+  <div>
+    <%= form.submit 'Post' %>
+    <%= link_to 'Cancel', posts_path %>
+  </div>
+</section>
+<% end %>
