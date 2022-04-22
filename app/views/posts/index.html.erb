@@ -1,4 +1,3 @@
 <%= render 'shared/header' %>
-<% @posts.each do |post| %>
-  <strong><%= post.title %></strong>
-<% end %>
+<%= link_to 'New Post +', root_path, class: 'my-8 font-bold text-gray-100 bg-violet-500 py-3 px-10 rounded-md' %>
+<%= render partial: 'shared/post', locals: { posts: @posts } %>
